@@ -53,7 +53,7 @@ app.post('/webhook/', function (req, res) {
 	  let commentreq = req.body.entry[0]
 	  console.log('this is comment ',req.body.entry)
 	  console.log('this is comment ',commentreq.value)
-	 console.log('messagine evvent: ',messaging_events)
+	 console.log('messagine evvent: ',JSON.stringify(req.body.entry[0]))
 	// for (let i = 0; i < messaging_events.length; i++) {
 	// 	let event = req.body.entry[0].messaging[i]
 	// 	let sender = event.sender.id
