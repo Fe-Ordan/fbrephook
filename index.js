@@ -50,7 +50,7 @@ app.get('/webhook/', function (req, res) {
 app.post('/webhook/', function (req, res) {
 	 console.log("the full query",req.query)
 	 let messaging_events = req.body.entry[0].messaging
-	  let commentreq = req.body.entry[0]
+	  let commentreq = req.body.entry[0].value
 	  console.log('this is comment ',commentreq)
 	 console.log('messagine evvent: ',messaging_events)
 	// for (let i = 0; i < messaging_events.length; i++) {
