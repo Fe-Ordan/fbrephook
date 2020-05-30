@@ -37,7 +37,9 @@ app.get('/', function (req, res) {
 
 // for facebook verification
 app.get('/webhook/', function (req, res) {
+	console.log(req.query)
 	if (req.query['hub.verify_token'] === 'allcomments') {
+			console.log('correct token')
 		res.send(req.query['hub.challenge'])
 	} else {
 		res.send('Error, wrong token')
